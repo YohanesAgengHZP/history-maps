@@ -197,6 +197,18 @@ This matters more than it sounds. The widely copied blog version of the Marmirol
 
 **Napoleon is among the most misquoted figures in history**; "Not tonight, Josephine" is entirely apocryphal. If you add to this file, take the words from a scholarly edition and record which one. Do not take them from a quotations site.
 
+### `src/js/storage.js` — why Web Storage is never touched directly
+
+**Safari throws on Web Storage rather than returning null.** With cookies blocked, or in some private-browsing configurations, even *reading* `localStorage` raises a `SecurityError`. `theme.js` reads it during boot, so an unguarded call took the entire page down before the map was built — a white screen, in Safari only.
+
+Every read and write goes through `store` / `session` here, which probe once and fall back to an in-memory `Map`. The preference is then forgotten between visits, which is the correct degradation: losing a theme choice beats losing the page. **Do not call `localStorage` or `sessionStorage` anywhere else.**
+
+Other Safari-specific choices, all of them load-bearing:
+
+- **No `color-mix()`.** It needs Safari 16.2, and when a CSS value is unsupported the whole declaration is dropped — which would have left the opening card's backdrop fully transparent over the map. The `--scrim` token does the same job everywhere.
+- **`-webkit-text-size-adjust: 100%`** on `html`, or iOS inflates body text in landscape and the plate's type scale stops being deliberate.
+- **`touch-action: manipulation`** on the small controls, to kill the 300ms double-tap delay, plus a padded `::after` hit area on the 32px preference buttons since they are under Apple's 44px target.
+
 ### `src/js/theme.js` — light / dark / auto
 
 `base.css` carried `[data-theme]` rules from the start but nothing ever set the attribute, so until Phase 4 the page could only follow the system. The button cycles auto → light → dark and stores the choice. `auto` removes the attribute rather than setting a value, which is what lets the `prefers-color-scheme` block take over again. `initTheme()` runs before `initMap()` so the page never flashes the wrong palette.
@@ -284,6 +296,8 @@ The panel runs: step counter, year, title, place, coordinates, outcome badge, wh
 - The footer gift line (`class="gift"`) invites her to point out mistakes. Keep that spirit.
 
 ## Testing
+
+**Playwright's default browser is Chromium, and this project's first four phases were tested only there.** Safari is where this stack breaks: a Web Storage call that throws instead of returning null, a CSS function that silently voids its whole declaration, text inflation in landscape. If WebKit is not in the Playwright cache, at minimum grep for `localStorage`, `color-mix`, `:has(`, `dominant-baseline` and `backdrop-filter` before claiming cross-browser support — and say plainly which engines were actually exercised.
 
 A cheap static pass first, which catches what a successful build does not — the build proves imports resolve, not that an element id exists. Cross-check every `getElementById` / `$("…")` in `src/js` against the ids in `index.html`, confirm each data file parses, and confirm every key in `archive.json` and `reflections.json` matches a stop title in `events.json`. A renamed stop silently empties both drawers otherwise.
 
