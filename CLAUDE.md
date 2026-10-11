@@ -232,6 +232,11 @@ Other Safari-specific choices, all of them load-bearing:
   - `setZoomAround` keeps the point under the pointer fixed, so the map does not slide away from the cursor.
   - This plate has only 3 zoom levels where a tiled map has ~20, which is why none of Leaflet's defaults suit it. `bounceAtZoomLimits: false` stops the rubber-band at the ends, which over so short a range reads as a glitch.
   - If you change the zoom range, re-measure: dispatch `WheelEvent`s with `deltaY: -6, ctrlKey: true` (pinch) and `deltaY: -120` (wheel) and check the per-event step.
+- **The first fit is deferred until the container really has a size** (`fitWhenSized`). `.plate` is sized by `aspect-ratio`, which Safari resolves later in layout than Chromium: fitting immediately measured a zero-height container, `fitBounds` returned an `Infinity` zoom, and `setMinZoom` pinned it. The map came up blank and only a reload fixed it. Three things make this work, and removing any one of them reintroduces the bug:
+  - **The map is constructed with a placeholder `center`/`zoom`.** `invalidateSize()` early-returns on a map that has never had a view, so deferring the view deadlocks — no view means the cached size can never refresh, which means no valid fit, which means no view.
+  - **`invalidateSize()` is called before `getBoundsZoom()`, not after.** `getBoundsZoom` reads Leaflet's cached size rather than the DOM.
+  - **An rAF poll drives the first fit, not the ResizeObserver.** An observer can be garbage collected when nothing holds a reference, and it never fires if the element was already its final size. The observer is kept (and referenced in `sizeWatch`) only for later resizes.
+  - `doFit` verifies its own result and retries if the zoom is not finite, so no single mistimed measurement can wedge the map.
 - **`moveCamera()` has two modes.** Outside the tour the map only recentres if the reader has already zoomed in — it must not yank the view while someone is reading a dossier. During the tour it eases in once to `minZoom + 1.3` and then pans from stop to stop. Reduced motion gets `setView` with no animation.
 - `animateHead()` touches `routeHead._path`. That is a Leaflet internal, used because `L.Path` exposes no element accessor and the dash animation needs `getTotalLength()`.
 
