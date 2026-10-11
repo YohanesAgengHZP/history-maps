@@ -8,13 +8,14 @@
 // as a music box rather than a band — which is also a period instrument: the musical box
 // mechanism was devised by the Geneva watchmaker Antoine Favre in 1796.
 import anthem from "../data/anthem.json";
+import { store } from "./storage.js";
 
 const KEY = "eaglesroad.sound";
 const $ = (id) => document.getElementById(id);
 
 let ctx = null, master = null, playing = false, timer = null, startedAt = 0;
 
-export const soundOn = () => localStorage.getItem(KEY) === "1";
+export const soundOn = () => store.get(KEY) === "1";
 
 export function initAudio() {
   const btn = $("sound");
@@ -22,7 +23,7 @@ export function initAudio() {
 
   btn.onclick = () => {
     const next = !soundOn();
-    localStorage.setItem(KEY, next ? "1" : "0");
+    store.set(KEY, next ? "1" : "0");
     next ? begin() : stop();
     paint(btn);
   };

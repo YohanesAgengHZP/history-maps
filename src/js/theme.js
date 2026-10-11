@@ -1,22 +1,24 @@
 // Manual light/dark override. base.css already carried [data-theme] rules; until now
 // nothing ever set the attribute, so the page could only follow the system setting.
+import { store } from "./storage.js";
+
 const KEY = "eaglesroad.theme";
 const ORDER = ["auto", "light", "dark"];
 const $ = (id) => document.getElementById(id);
 
 export function initTheme() {
-  apply(localStorage.getItem(KEY) || "auto");
+  apply(store.get(KEY) || "auto");
 
   const btn = $("theme");
   if (!btn) return;
   btn.onclick = () => {
-    const now = localStorage.getItem(KEY) || "auto";
+    const now = store.get(KEY) || "auto";
     apply(ORDER[(ORDER.indexOf(now) + 1) % ORDER.length]);
   };
 }
 
 function apply(mode) {
-  localStorage.setItem(KEY, mode);
+  store.set(KEY, mode);
   if (mode === "auto") document.documentElement.removeAttribute("data-theme");
   else document.documentElement.setAttribute("data-theme", mode);
 

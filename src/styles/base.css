@@ -4,7 +4,7 @@
   --paper:#E6EAE8; --sea:#D2DCDA; --land:#F4F6F5; --coast:#8C9A96; --grat:rgba(60,80,90,.10);
   --ink:#1B2433; --muted:#566170; --rule:rgba(27,36,51,.14);
   --imperial:#24346F; --victory:#93690F; --defeat:#9B2C2C; --draw:#5F6673; --milestone:#24346F;
-  --panel:#FAFBFB; --halo:#F4F6F5;
+  --panel:#FAFBFB; --halo:#F4F6F5; --scrim:rgba(230,234,232,.88);
   --display:"Bodoni Moda", "Didot", "Bodoni 72", "Bodoni MT", Georgia, serif;
   --sans:"Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --mono:"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -17,17 +17,19 @@
     --paper:#0E1820; --sea:#122330; --land:#213139; --coast:#50676F; --grat:rgba(200,220,230,.07);
     --ink:#ECE8DD; --muted:#9AA6AE; --rule:rgba(236,232,221,.14);
     --imperial:#A5B6F2; --victory:#E3B852; --defeat:#EE7A6E; --draw:#AAB0BA; --milestone:#A5B6F2;
-    --panel:#15232D; --halo:#213139;
+    --panel:#15232D; --halo:#213139; --scrim:rgba(14,24,32,.90);
   }
 }
 :root[data-theme="dark"]{
   --paper:#0E1820; --sea:#122330; --land:#213139; --coast:#50676F; --grat:rgba(200,220,230,.07);
   --ink:#ECE8DD; --muted:#9AA6AE; --rule:rgba(236,232,221,.14);
   --imperial:#A5B6F2; --victory:#E3B852; --defeat:#EE7A6E; --draw:#AAB0BA; --milestone:#A5B6F2;
-  --panel:#15232D; --halo:#213139;
+  --panel:#15232D; --halo:#213139; --scrim:rgba(14,24,32,.90);
 }
 *,*::before,*::after{box-sizing:inherit}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
+/* iOS Safari inflates text in landscape unless told not to; the plate's type scale
+   is deliberate, so let it alone */
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
 button{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--imperial);outline-offset:2px}
@@ -41,8 +43,10 @@ button{font:inherit;color:inherit}
 
 /* sound and theme sit in the masthead, away from the plate's own furniture */
 .prefs{margin-left:auto;display:flex;gap:6px;align-self:center}
-.prefs button{width:32px;height:32px;display:grid;place-items:center;padding:0;cursor:pointer;
+/* 32px is under Apple's 44px touch target, so pad the hit area without growing the button */
+.prefs button{width:32px;height:32px;position:relative;touch-action:manipulation;display:grid;place-items:center;padding:0;cursor:pointer;
   border:1px solid var(--rule);background:transparent}
+.prefs button::after{content:"";position:absolute;inset:-6px}
 .prefs button:hover{border-color:var(--ink)}
 .prefs button[aria-pressed="true"]{border-color:var(--ink);background:var(--sea)}
 .prefs svg{width:16px;height:16px;fill:none;stroke:var(--ink);stroke-width:1.3;

@@ -2,6 +2,7 @@
 // than route changes, so the map underneath keeps its state and nothing has to be rebuilt.
 import { state, events, subscribe, select } from "./store.js";
 import { start as startJourney } from "./journey.js";
+import { session } from "./storage.js";
 
 const $ = (id) => document.getElementById(id);
 const SEEN = "eaglesroad.introSeen";
@@ -24,7 +25,7 @@ export function initIntro() {
 
   // sessionStorage, not localStorage: the card should greet her again on a fresh visit,
   // but not every time she reloads while reading
-  if (!sessionStorage.getItem(SEEN)) open(intro);
+  if (!session.get(SEEN)) open(intro);
 
   // the closing chapter arrives when the tour ends on the last stop, not merely when
   // someone clicks the final marker
@@ -41,7 +42,7 @@ export function initIntro() {
 function open(el) {
   lastFocus = document.activeElement;
   el.hidden = false;
-  if (el.id === "intro") sessionStorage.setItem(SEEN, "1");
+  if (el.id === "intro") session.set(SEEN, "1");
   el.querySelector("button")?.focus();
 }
 
