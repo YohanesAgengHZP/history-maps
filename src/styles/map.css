@@ -1,0 +1,163 @@
+/* The plate: Leaflet supplies pan and zoom, everything drawn on it is ours. */
+
+/* top-aligned, not centred: an open reflection makes the panel much taller than the
+   plate, and a centred plate would float in dead space away from where reading starts */
+.map-wrap{background:var(--panel);border-right:1px solid var(--rule);overflow:hidden;min-width:0;display:flex;align-items:flex-start}
+/* .plate fixes the proportions of the sheet, so the overlay furniture always lands
+   inside the neatline even when the info panel makes the column taller. */
+.plate{position:relative;width:100%;aspect-ratio:1000/720}
+#map{position:absolute;inset:0;background:var(--sea)}
+.leaflet-container{font:inherit;background:var(--sea);outline:0}
+.leaflet-container a{color:var(--imperial)}
+
+/* ---- geography ---- */
+.land{fill:var(--land);stroke:var(--coast);stroke-width:.8}
+/* water lining: coast-coloured strokes cut by sea-coloured ones, all on the same outline,
+   leaving concentric lines hugging every coast. The land fill covers the inland half. */
+.water-line{fill:none;stroke:var(--coast)}
+.water-gap{fill:none;stroke:var(--sea)}
+.grat{fill:none;stroke:var(--grat);stroke-width:.6}
+/* hachures: short strokes running downhill, thicker where the slope is steeper */
+.hach{fill:none;stroke:var(--coast);stroke-linecap:round}
+.hach-0{opacity:.34;stroke-width:.9}
+.hach-1{opacity:.48;stroke-width:1.35}
+.hach-2{opacity:.64;stroke-width:1.8}
+
+.route-full{fill:none;stroke:var(--imperial);opacity:.28;stroke-width:1.2;stroke-dasharray:3 5;stroke-linejoin:round;stroke-linecap:round}
+.route-done{fill:none;stroke:var(--imperial);opacity:.55;stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round}
+.route-head{fill:none;stroke:var(--imperial);stroke-width:2.2;stroke-linejoin:round;stroke-linecap:round}
+.route-head.draw{animation:draw-head .65s cubic-bezier(.33,1,.68,1) forwards}
+@keyframes draw-head{from{stroke-dashoffset:var(--len)}to{stroke-dashoffset:0}}
+
+/* ---- markers (Leaflet divIcons, so they stay a constant size on screen) ---- */
+.leaflet-div-icon{background:none;border:0}
+.mk{display:grid;place-items:center;cursor:pointer}
+.mk i{display:block;width:var(--d);height:var(--d);border-radius:50%;background:var(--c);
+      border:1.5px solid var(--land);box-sizing:content-box}
+.mk.ms i{border-radius:0;transform:rotate(45deg)}
+.mk.o-victory{--c:var(--victory)} .mk.o-defeat{--c:var(--defeat)}
+.mk.o-draw{--c:var(--draw)} .mk.o-milestone{--c:var(--milestone)}
+.mk.future{opacity:.42}
+.mk.off{opacity:.1;pointer-events:none}
+/* during the guided journey the current stop carries the eye and the rest recede */
+body.in-journey .mk{opacity:.22;transition:opacity .4s ease}
+body.in-journey .mk.current{opacity:1}
+body.in-journey .mk.off{opacity:.05}
+.mk.current::after{content:"";position:absolute;inset:50%;width:calc(var(--d) + 12px);height:calc(var(--d) + 12px);
+  transform:translate(-50%,-50%);border:1.5px solid var(--ink);border-radius:50%}
+
+.sea-label{font-family:var(--display);font-style:italic;color:var(--coast);font-size:13px;
+  letter-spacing:.14em;white-space:nowrap;pointer-events:none;text-align:center}
+.map-label{font-family:var(--display);font-weight:600;font-size:15px;color:var(--ink);white-space:nowrap;
+  pointer-events:none;text-shadow:0 0 4px var(--halo),0 0 4px var(--halo),0 0 4px var(--halo),0 0 4px var(--halo)}
+.map-label .yr{font-weight:400;font-style:italic;color:var(--muted)}
+.map-label.left{transform:translateX(-100%)}
+
+/* ---- plate furniture, drawn over the map and fixed to the sheet ---- */
+.frame{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:500}
+.plate-mask{fill:var(--panel)}
+.neatline{fill:none;stroke:var(--ink)}
+.neatline.outer{stroke-width:1}
+.neatline.inner{stroke-width:1.8}
+.edge-tick{font-family:var(--mono);fill:var(--muted);text-anchor:middle;dominant-baseline:middle;font-size:9px}
+
+.rose{fill:var(--coast)}
+.rose .needle{fill:var(--ink)}
+.rose text{font-family:var(--display);font-size:11px;letter-spacing:.1em;fill:var(--ink);text-anchor:middle}
+
+.cartouche .box{fill:var(--panel);stroke:var(--ink);stroke-width:1}
+.cartouche .head{font-family:var(--display);fill:var(--ink);text-anchor:middle;letter-spacing:.2em;font-size:9.5px}
+.cartouche .rule{stroke:var(--ink);stroke-width:.6}
+.cartouche .row{font-family:var(--sans);fill:var(--ink);dominant-baseline:middle;font-size:9px}
+.cartouche .subhead{font-family:var(--mono);fill:var(--muted);letter-spacing:.1em;text-transform:uppercase;dominant-baseline:middle;font-size:7.6px}
+.cartouche .key-route{stroke:var(--imperial);opacity:.8;stroke-width:1.2;stroke-dasharray:2.5 2.5}
+.scalebar line{stroke:var(--ink)}
+.scalebar text{font-family:var(--mono);fill:var(--muted);font-size:8.5px;text-anchor:middle}
+
+/* ---- historical frontiers ----
+   outline only, so the engraved relief underneath stays readable */
+.bdy{fill:none;stroke:var(--ink);stroke-width:1;opacity:.34}
+.bdy.dependent{fill:var(--imperial);fill-opacity:.07}
+/* the dataset marks these borders approximate; the map should not look more certain */
+.bdy.approximate{stroke-dasharray:4 3;opacity:.38}
+.bdy:hover{opacity:.7;stroke-width:1.5}
+.leaflet-tooltip.bdy-tip{background:var(--panel);border:1px solid var(--rule);border-radius:0;
+  color:var(--ink);font-family:var(--sans);font-size:.78rem;box-shadow:none;padding:4px 8px}
+.leaflet-tooltip.bdy-tip::before{display:none}
+
+/* ---- opening card and closing chapter ----
+   overlays on the plate, so the map underneath keeps its state */
+.card{position:absolute;inset:0;z-index:700;display:grid;place-items:center;
+  background:color-mix(in srgb, var(--paper) 82%, transparent);padding:4%}
+.card[hidden]{display:none}
+.card-inner{max-width:430px;background:var(--panel);border:1px solid var(--ink);padding:26px 26px 22px;
+  max-height:100%;overflow:auto}
+.card-eyebrow{margin:0 0 6px;font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--muted)}
+.card-title{margin:0 0 14px;font-family:var(--display);font-weight:500;font-size:2.1rem;
+  line-height:1.05;letter-spacing:-.01em}
+.card-title i{font-weight:400}
+.card p{margin:0 0 12px;font-size:.95rem;line-height:1.6}
+.card-note{font-size:.86rem!important;color:var(--muted)}
+.card-gift{font-family:var(--display);font-style:italic;font-size:1rem!important;
+  border-top:1px solid var(--rule);padding-top:12px;margin-top:16px!important}
+.card-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.card-actions button{font:inherit;font-size:.9rem;padding:9px 14px;border:1px solid var(--rule);
+  background:transparent;color:inherit;cursor:pointer}
+.card-actions button:hover{border-color:var(--ink)}
+.card-actions .card-primary{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.card-actions .card-primary:hover{opacity:.9}
+
+/* ---- controls ---- */
+.layers{max-width:150px;border:1px solid var(--rule);background:var(--panel);padding:7px 9px 8px}
+.layers-head{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.layers-opts{display:flex;gap:4px}
+.layer-opt{font:inherit;font-size:.76rem;border:1px solid var(--rule);background:transparent;
+  color:inherit;padding:3px 7px;cursor:pointer;border-radius:0}
+.layer-opt:hover{border-color:var(--ink)}
+.layer-opt[aria-checked="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.layers-note{margin:6px 0 0;font-size:.64rem;line-height:1.35;color:var(--muted)}
+/* one control column down the left, so nothing lands on the compass rose */
+.controls{position:absolute;top:5.2%;left:4%;z-index:600;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.zoom{display:flex;flex-direction:column;border:1px solid var(--rule);background:var(--panel)}
+.zoom button{width:34px;height:34px;border:0;background:transparent;cursor:pointer;display:grid;place-items:center;padding:0}
+.zoom button+button{border-top:1px solid var(--rule)}
+.zoom button:hover{background:var(--sea)}
+.zoom svg{display:block;width:15px;height:15px;fill:none;stroke:var(--ink);stroke-width:1.4}
+
+.inset{position:absolute;left:4%;bottom:5.2%;z-index:600;display:flex;align-items:center;gap:10px;
+  padding:8px 12px 8px 10px;border:1px dashed var(--coast);background:var(--panel);text-align:left;cursor:pointer;max-width:240px}
+.inset .dot{flex:none;width:11px;height:11px;transform:rotate(45deg);background:var(--milestone);opacity:.42}
+.inset strong{display:block;font-family:var(--display);font-weight:600;font-size:.95rem;line-height:1.2}
+.inset .sub{display:block;font-size:.78rem;color:var(--muted);line-height:1.3}
+.inset.visited .dot{opacity:1}
+.inset.current{border-style:solid;border-color:var(--ink)}
+.inset.current .dot{outline:1.5px solid var(--ink);outline-offset:3px}
+.inset.off{opacity:.25;pointer-events:none}
+
+@media (max-width: 900px){
+  .map-wrap{border-right:0;border-bottom:1px solid var(--rule)}
+}
+@media (max-width: 620px){
+  /* the rose already occupies the top-right corner of a small plate */
+  .layers{max-width:118px;padding:5px 7px}
+  .layers-note{display:none}
+}
+@media (max-width: 560px){
+  /* The plate is only ~280px tall on a phone, far shorter than this card. Escaping to
+     the viewport gives it the whole screen instead of clipping and auto-scrolling
+     past its own title. */
+  .card{position:fixed;padding:0}
+  .card-inner{max-width:none;width:100%;height:100%;border:0;padding:20px 18px;
+    display:flex;flex-direction:column;justify-content:center}
+  .card-title{font-size:1.75rem;margin-bottom:12px}
+  .card p{font-size:.9rem;margin-bottom:10px}
+  .card-actions{margin-top:16px}
+  .card-actions button{flex:1 1 auto}
+  .inset{max-width:170px;padding:6px 9px}
+  .inset .sub{display:none}
+  .zoom button{width:30px;height:30px}
+  .zoom svg{width:13px;height:13px}
+  .sea-label{font-size:11px;letter-spacing:.1em}
+}

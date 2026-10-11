@@ -1,0 +1,31 @@
+{
+ "boundaries": {
+  "name": "Historical Basemaps",
+  "author": "André Ourednik and contributors",
+  "repository": "https://github.com/aourednik/historical-basemaps",
+  "licence": "GPL-3.0",
+  "years": [
+   1800,
+   1815
+  ],
+  "retrieved": "2026-10-11",
+  "processing": "Clipped to the map window (-30,12 to 62,72), slivers under 200 km² dropped, simplified to 8% with mapshaper, fields reduced to NAME, SUBJECTO and BORDERPRECISION.",
+  "caveat": "The maintainers describe the project as work in progress and ask that the maps be checked against other sources before academic use. Border precision is published per feature: 1 approximate, 2 moderately precise, 3 determined by treaty or law. Treat these outlines as an informed sketch of the political map, not as a surveyed boundary.",
+  "gaps": "Only 1800 and 1815 fall inside this atlas's span. There is no snapshot for 1805, 1812 or 1813, and none is interpolated."
+ },
+ "archive": {
+  "discovery": "Wikimedia Commons API, searched per battle; only items the API reports as public domain or CC0 were kept.",
+  "retrieved": "2026-10-11",
+  "fields": "Title, date, creator and licence are copied from the catalogue record. The holding institution is named from the credit line.",
+  "nature": "An item is marked a later depiction when the record's own evidence says so: a date well after the battle, or an engraver who was still a child at the time.",
+  "linking": "Entries link to the institution's catalogue where the record carries a resolvable URL, otherwise to the Wikimedia Commons record. No images are embedded: the page stays self-contained and no reuse terms are stretched.",
+  "unverified": "The Library of Congress refuses automated requests, so no LoC item is included. Gallica (BnF) also blocks scripts, but its two ark URLs here were opened in a browser and their titles checked against the catalogue record before being used."
+ },
+ "tactical": {
+  "status": "blocked",
+  "sought": "A dataset of troop positions, formations and movements with geographic calibration, for Austerlitz, Waterloo or Borodino.",
+  "found": "Digitised battle plans as images only. A scanned plan is not a georeferenced dataset, and none of the sources surveyed publishes troop positions as coordinates.",
+  "consequence": "Battle Lens shows the period plan as an archival document and links to its catalogue record. No troop positions, formations or battlefield geometry are drawn, because none could be sourced.",
+  "toResolve": "A georeferenced battle dataset, or ground-control points allowing a scanned plan to be warped onto the map, each with licensing that permits redistribution."
+ }
+}

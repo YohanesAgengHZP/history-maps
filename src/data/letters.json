@@ -1,0 +1,65 @@
+{
+ "source": {
+  "work": "Napoleon's Letters to Josephine, 1796–1812",
+  "translator": "Henry Foljambe Hall",
+  "published": "1901",
+  "via": "Project Gutenberg ebook 37499",
+  "url": "https://www.gutenberg.org/ebooks/37499",
+  "rights": "The letters themselves are long out of copyright; Hall's 1901 translation is public domain.",
+  "fidelity": "Text is sliced from the Gutenberg file, not retyped. The only change is typographic: Gutenberg writes em dashes as two hyphens. Spellings are left as Hall printed them."
+ },
+ "letters": {
+  "Battle of Arcole": {
+   "place": "Marmirolo, near Mantua",
+   "date": "17 July 1796",
+   "signed": "Bonaparte",
+   "paragraphs": [
+    "I got your letter, my beloved; it has filled my heart with joy. I am grateful to you for the trouble you have taken to send me news; your health should be better to-day—I am sure you are cured. I urge you strongly to ride, which cannot fail to do you good.",
+    "Ever since I left you, I have been sad. I am only happy when by your side. Ceaselessly I recall your kisses, your tears, your enchanting jealousy; and the charms of the incomparable Josephine keep constantly alight a bright and burning flame in my heart and senses.",
+    "When, free from every worry, from all business, shall I spend all my moments by your side, to have nothing to do but to love you, and to prove it to you? I shall send your horse, but I am hoping that you will soon be able to rejoin me. I thought I loved you some days ago; but, since I saw you, I feel that I love you even a thousand times more.",
+    "Ever since I have known you, I worship you more every day; which proves how false is the maxim of La Bruyere that \"Love comes all at once.\" Everything in nature has a regular course, and different degrees of growth. Ah! pray let me see some of your faults; be less beautiful, less gracious, less tender, and, especially, less kind; above all never be jealous, never weep; your tears madden me, fire my blood.",
+    "Be sure that it is no longer possible for me to have a thought except for you, or an idea of which you shall not be the judge. Have a good rest. Haste to get well. Come and join me, so that, at least, before dying, we could say—\"We were happy for so many days!!\" Millions of kisses, and even to Fortune, in spite of his naughtiness."
+   ],
+   "note": "Written during the siege of Mantua, in the middle of the first Italian campaign."
+  },
+  "Battle of Austerlitz": {
+   "place": "Austerlitz",
+   "date": "3 December 1805",
+   "signed": "Napoleon",
+   "paragraphs": [
+    "I have despatched to you Lebrun from the field of battle. I have beaten the Russian and Austrian army commanded by the two Emperors. I am rather fagged. I have bivouacked eight days in the open air, through nights sufficiently keen. To-night I rest in the chateau of Prince Kaunitz, where I shall sleep for the next two or three hours. The Russian army is not only beaten, but destroyed. I embrace you."
+   ],
+   "note": "Written the day after the battle, from the field."
+  },
+  "Jena–Auerstedt": {
+   "place": "Jena",
+   "date": "15 October 1806",
+   "signed": "Napoleon",
+   "paragraphs": [
+    "I have made excellent manoeuvres against the Prussians. Yesterday I won a great victory. They had 150,000 men. I have made 20,000 prisoners, taken 100 pieces of cannon, and flags. I was in presence of the King of Prussia, and near to him; I nearly captured him and the Queen.",
+    "For the past two days I have bivouacked. I am in excellent health. Adieu, dear. Keep well, and love me. If Hortense is at Mayence, give her a kiss; also to Napoleon and to the little one."
+   ],
+   "note": "Written the day after Jena and Auerstedt were fought."
+  },
+  "Battle of Eylau": {
+   "place": "Eylau",
+   "date": "17 February 1807",
+   "signed": "Napoleon",
+   "paragraphs": [
+    "Your letter to hand, informing me of your arrival at Paris. I am very glad to know you are there. My health is good. The battle of Eylau was very sanguinary, and very hardly contested. Corbineau was slain. He was a very brave man. I had grown very fond of him.",
+    "Adieu, dear; it is as warm here as in the month of April; everything is thawing. My health is good."
+   ],
+   "note": "Written nine days after the battle, on the ground where it was fought."
+  },
+  "Battle of Friedland": {
+   "place": "Friedland",
+   "date": "16 June 1807",
+   "signed": "Napoleon",
+   "paragraphs": [
+    "Yesterday I despatched Moustache with the news of the battle of Friedland. Since then I have continued to pursue the enemy. Koenigsberg, which is a town of 80,000 souls, is in my power. I have found there many cannon, large stores, and, lastly, more than 160,000 muskets, which have come from England.",
+    "Adieu, dear. My health is perfect, although I have a slight catarrh caused by bivouacking in the rain and cold. Be happy and cheerful.—Yours ever,"
+   ],
+   "note": "Written two days after the battle that ended the war with Russia."
+  }
+ }
+}

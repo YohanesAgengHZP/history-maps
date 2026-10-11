@@ -1,0 +1,34 @@
+{
+ "outcome": {
+  "victory": "Victory",
+  "defeat": "Defeat",
+  "draw": "Indecisive",
+  "milestone": "Turning point"
+ },
+ "kind": {
+  "battle": "Battle",
+  "siege": "Siege",
+  "campaign": "Campaign movement",
+  "political": "Political turning point",
+  "personal": "Personal milestone"
+ },
+ "role": {
+  "commanded": "Napoleon commanded in person",
+  "present": "Napoleon present, not in overall command",
+  "absent": "Napoleon was not present"
+ },
+ "tiers": [
+  {
+   "r": 4,
+   "l": "Under 100,000"
+  },
+  {
+   "r": 5.4,
+   "l": "100,000 – 250,000"
+  },
+  {
+   "r": 7,
+   "l": "Over 250,000"
+  }
+ ]
+}

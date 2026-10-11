@@ -1,0 +1,76 @@
+/* Filter row, chronological track and the fallback legend. */
+.timeline{border:1px solid var(--rule);border-top:0;background:var(--panel);padding:14px 18px 16px;
+  display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px 20px;align-items:center}
+
+/* A grid, not a wrapping flex row. Flex sized every group to its own content, so the
+   gaps between groups read the same as the gaps inside one and the selects went ragged
+   the moment the row wrapped. auto-fit gives equal columns at any width, and the fixed
+   label column keeps the controls aligned with each other. */
+.filters{grid-column:1 / -1;display:grid;grid-template-columns:repeat(auto-fit, minmax(15rem, 1fr));
+  gap:10px 24px;align-items:center;padding-bottom:12px;border-bottom:1px solid var(--rule)}
+.fgroup{display:grid;grid-template-columns:4.6rem minmax(0,1fr);align-items:center;gap:9px}
+.filters label{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.filters select,.filters button{font:inherit;font-size:.88rem;color:inherit;border:1px solid var(--rule);background:transparent;padding:5px 8px;border-radius:0;cursor:pointer}
+.filters select{width:100%;min-width:0}
+.filters select:hover,.filters button:hover{border-color:var(--ink)}
+.factions{display:flex;align-items:center;gap:12px}
+.fcount{font-family:var(--mono);font-size:.72rem;color:var(--muted)}
+
+.play{padding:10px 16px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer;font-weight:600;white-space:nowrap}
+.play:hover{opacity:.9}
+
+/* its own full-width row under the track, so it never disturbs the two-column layout */
+.journey{grid-column:1 / -1;display:flex;flex-wrap:wrap;align-items:center;gap:8px;
+  padding-top:12px;border-top:1px solid var(--rule)}
+.journey[hidden]{display:none}
+.journey button{font:inherit;font-size:.88rem;color:inherit;border:1px solid var(--rule);background:transparent;padding:6px 12px;cursor:pointer}
+.journey button:hover:not(:disabled){border-color:var(--ink)}
+.journey button:disabled{opacity:.4;cursor:default}
+.jstatus{font-family:var(--mono);font-size:.72rem;color:var(--muted);margin-left:auto}
+
+.track-scroll{overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.track{display:flex;gap:18px;min-width:max-content}
+.phase{display:flex;flex-direction:column;gap:6px}
+.phase-name{font-family:var(--display);font-size:.9rem;font-style:italic;color:var(--muted);white-space:nowrap;border-bottom:1px solid var(--rule);padding-bottom:3px}
+.phase-name b{font-style:normal;font-weight:600;color:var(--ink);margin-right:6px}
+.phase-name .range{font-family:var(--mono);font-style:normal;font-size:.72rem}
+.ticks{display:flex;gap:2px}
+.tick{width:22px;height:30px;border:0;background:transparent;cursor:pointer;display:grid;place-items:center;padding:0;position:relative}
+/* shape says what kind of event it was, colour says how it ended */
+.tick::before{content:"";width:9px;height:9px;border-radius:50%;background:currentColor;opacity:.4;box-sizing:border-box}
+.tick.k-siege::before{border-radius:1px;width:8px;height:8px}
+.tick.k-campaign::before{border-radius:50%;width:8px;height:8px;background:transparent;border:2px solid currentColor}
+.tick.k-political::before{border-radius:0;transform:rotate(45deg);width:8px;height:8px}
+.tick.k-personal::before{border-radius:0;transform:rotate(45deg);width:8px;height:8px;background:transparent;border:1.5px solid currentColor}
+.tick.visited::before{opacity:1}
+.tick[aria-current="true"]::after{content:"";position:absolute;inset:4px 2px;border:1.5px solid var(--ink)}
+.tick.off{opacity:.18;pointer-events:none}
+.tick.o-victory{color:var(--victory)} .tick.o-defeat{color:var(--defeat)} .tick.o-draw{color:var(--draw)} .tick.o-milestone{color:var(--milestone)}
+
+.legend{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:6px 20px;font-size:.85rem;color:var(--muted);margin:0;padding:0;list-style:none}
+.legend li{display:flex;align-items:center;gap:7px}
+.legend i{width:9px;height:9px;border-radius:50%;display:inline-block}
+.legend .m i{border-radius:0;transform:rotate(45deg);width:8px;height:8px}
+.legend i.rl{width:22px;height:0;border-radius:0;border-top:1.5px dashed var(--imperial)}
+/* key for the tick shapes, mirroring .tick::before above */
+.kind-key{gap:14px!important;flex-wrap:wrap}
+.kind-key span{display:inline-flex;align-items:center;gap:6px}
+.legend i.tk{width:9px;height:9px;border-radius:50%;background:var(--muted);box-sizing:border-box}
+.legend i.tk.k-siege{border-radius:1px;width:8px;height:8px}
+.legend i.tk.k-campaign{width:8px;height:8px;background:transparent;border:2px solid var(--muted)}
+.legend i.tk.k-political{border-radius:0;transform:rotate(45deg);width:8px;height:8px}
+.legend i.tk.k-personal{border-radius:0;transform:rotate(45deg);width:8px;height:8px;background:transparent;border:1.5px solid var(--muted)}
+/* the cartouche carries the key on the plate; below 620px it is too small to read,
+   so it hides and the same keys appear as list items instead */
+.legend .key-item{display:none}
+
+@media (max-width: 900px){
+  .timeline{grid-template-columns:1fr}
+  .play{justify-self:start}
+}
+@media (max-width: 620px){
+  .cartouche{display:none}
+  .legend .cartouche-note{display:none}
+  .legend .key-item{display:flex}
+  .filters{gap:10px}
+}

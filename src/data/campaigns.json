@@ -1,0 +1,79 @@
+{
+ "phases": [
+  {
+   "id": "rise",
+   "name": "Rise",
+   "range": "1769–1799"
+  },
+  {
+   "id": "empire",
+   "name": "Consul and emperor",
+   "range": "1800–1807"
+  },
+  {
+   "id": "strain",
+   "name": "Overreach",
+   "range": "1808–1811"
+  },
+  {
+   "id": "russia",
+   "name": "Russia and Spain",
+   "range": "1812"
+  },
+  {
+   "id": "fall",
+   "name": "The fall",
+   "range": "1813–1821"
+  }
+ ],
+ "campaigns": [
+  {
+   "id": "life",
+   "name": "Life and politics"
+  },
+  {
+   "id": "rev",
+   "name": "Revolutionary Wars, 1793–95"
+  },
+  {
+   "id": "italy1",
+   "name": "First Italian campaign, 1796–97"
+  },
+  {
+   "id": "egypt",
+   "name": "Egypt and Syria, 1798–99"
+  },
+  {
+   "id": "italy2",
+   "name": "Marengo campaign, 1800"
+  },
+  {
+   "id": "ga",
+   "name": "Grande Armée, 1805–07"
+  },
+  {
+   "id": "pen",
+   "name": "Peninsular War, 1808–14"
+  },
+  {
+   "id": "aus09",
+   "name": "Austrian campaign, 1809"
+  },
+  {
+   "id": "rus",
+   "name": "Russian campaign, 1812"
+  },
+  {
+   "id": "ger13",
+   "name": "German campaign, 1813"
+  },
+  {
+   "id": "fr14",
+   "name": "Campaign in France, 1814"
+  },
+  {
+   "id": "hd",
+   "name": "Hundred Days, 1815"
+  }
+ ]
+}

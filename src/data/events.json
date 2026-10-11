@@ -1,0 +1,1085 @@
+[
+ {
+  "p": "rise",
+  "y": "1769",
+  "d": "15 August 1769",
+  "t": "Born in Ajaccio",
+  "camp": "life",
+  "src": [
+   "Roberts, Napoleon: A Life (2014)",
+   "Fondation Napoléon (napoleon.org)"
+  ],
+  "w": "Ajaccio, Corsica",
+  "ll": [
+   8.74,
+   41.92
+  ],
+  "o": "milestone",
+  "desc": "Napoleone di Buonaparte is born into minor Corsican nobility, a year after Genoa handed the island to France. At nine he is sent to military school on the mainland, speaking French with an accent he never fully loses.",
+  "fact": "He wasn't short. At about 1.69 m he was average for his time. The “five foot two” legend comes from mixing up French and English inches, helped along by British cartoonists.",
+  "kind": "personal"
+ },
+ {
+  "p": "rise",
+  "y": "1793",
+  "d": "September–December 1793",
+  "t": "Siege of Toulon",
+  "men": 50000,
+  "camp": "rev",
+  "coal": "War of the First Coalition",
+  "np": "present",
+  "cmd": [
+   "France: Jacques Dugommier, with Captain Bonaparte commanding the artillery",
+   "Coalition: Samuel Hood (Britain) and Federico Gravina (Spain)"
+  ],
+  "src": [
+   "Chandler, The Campaigns of Napoleon (1966)",
+   "Encyclopaedia Britannica"
+  ],
+  "w": "Toulon, southern France",
+  "ll": [
+   5.93,
+   43.12
+  ],
+  "o": "victory",
+  "desc": "A young artillery officer spots the key to the royalist-held port: take the heights, put guns on them, and the British fleet has to leave. It works, and at 24 he is promoted to brigadier general.",
+  "fact": "He took a bayonet wound to the thigh in the final assault, one of the very few wounds of his whole career.",
+  "kind": "siege"
+ },
+ {
+  "p": "rise",
+  "y": "1795",
+  "d": "5 October 1795",
+  "t": "13 Vendémiaire",
+  "camp": "life",
+  "np": "present",
+  "cmd": [
+   "Convention: Paul Barras, with Bonaparte commanding the guns",
+   "Royalist sections of Paris"
+  ],
+  "src": [
+   "Roberts, Napoleon: A Life (2014)",
+   "Fondation Napoléon (napoleon.org)"
+  ],
+  "w": "Paris",
+  "ll": [
+   2.333,
+   48.865
+  ],
+  "o": "milestone",
+  "nudge": [
+   -17,
+   -15
+  ],
+  "desc": "Royalist crowds march on the National Convention. Bonaparte, put in charge of its defence, turns cannon on the streets around the church of Saint-Roch. The revolt collapses, and within months he is married to Joséphine and commanding the Army of Italy.",
+  "fact": "The famous line “a whiff of grapeshot” wasn't his. The historian Thomas Carlyle coined it decades later.",
+  "kind": "political"
+ },
+ {
+  "p": "rise",
+  "y": "1796",
+  "d": "12 April 1796",
+  "t": "Battle of Montenotte",
+  "men": 25000,
+  "camp": "italy1",
+  "coal": "War of the First Coalition",
+  "np": "commanded",
+  "cmd": [
+   "France: Bonaparte, with Masséna and Laharpe",
+   "Austria: Eugène-Guillaume Argenteau"
+  ],
+  "src": [
+   "Chandler, The Campaigns of Napoleon (1966)",
+   "Fondation Napoléon (napoleon.org)"
+  ],
+  "w": "Cairo Montenotte, Liguria",
+  "ll": [
+   8.28,
+   44.4
+  ],
+  "o": "victory",
+  "nudge": [
+   -8,
+   6
+  ],
+  "desc": "His first battle as commander-in-chief. Days after taking over the ragged Army of Italy he drives a wedge between the Austrian and Piedmontese forces in the Ligurian hills, and keeps them apart for the rest of the campaign.",
+  "fact": "He is said to have remarked later that his own nobility dated from Montenotte: his career, not his birth, was his title.",
+  "kind": "battle"
+ },
+ {
+  "p": "rise",
+  "y": "1796",
+  "d": "10 May 1796",
+  "t": "Battle of Lodi",
+  "men": 27000,
+  "camp": "italy1",
+  "coal": "War of the First Coalition",
+  "np": "commanded",
+  "cmd": [
+   "France: Bonaparte",
+   "Austria: Karl Philipp Sebottendorf"
+  ],
+  "src": [
+   "Chandler, The Campaigns of Napoleon (1966)",
+   "The Napoleon Series (napoleon-series.org)"
+  ],
+  "w": "Lodi, Lombardy",
+  "ll": [
+   9.5,
+   45.31
+  ],
+  "o": "victory",
+  "desc": "In his first campaign as a commander, his troops storm a bridge over the Adda river under Austrian fire. A small battle with a very large legend.",
+  "fact": "His soldiers are said to have started calling him “le petit caporal” (the little corporal) after Lodi, and he later said it was here he first believed he was meant for great things.",
+  "kind": "battle"
+ },
+ {
+  "p": "rise",
+  "y": "1796",
+  "d": "15–17 November 1796",
+  "t": "Battle of Arcole",
+  "men": 44000,
+  "camp": "italy1",
+  "coal": "War of the First Coalition",
+  "np": "commanded",
+  "cmd": [
+   "France: Bonaparte, with Masséna and Augereau",
+   "Austria: József Alvinczi"
+  ],
+  "src": [
+   "Chandler, The Campaigns of Napoleon (1966)",
+   "Fondation Napoléon (napoleon.org)"
+  ],
+  "w": "Arcole, near Verona",
+  "ll": [
+   11.27,
+   45.36
+  ],
+  "o": "victory",
+  "nudge": [
+   7,
+   5
+  ],
+  "desc": "Three days of fighting in the marshes east of Verona finally push the Austrians back.",
+  "fact": "Antoine-Jean Gros painted him leading the charge across the bridge with a flag. In reality the charge stalled, and he ended up being pulled out of a muddy ditch.",
+  "kind": "battle"
+ },
+ {
+  "p": "rise",
+  "y": "1797",
+  "d": "14–15 January 1797",
+  "t": "Battle of Rivoli",
+  "men": 51000,
+  "camp": "italy1",
+  "coal": "War of the First Coalition",
+  "np": "commanded",
+  "cmd": [
+   "France: Bonaparte, with Masséna and Joubert",
+   "Austria: József Alvinczi"
+  ],
+  "src": [
+   "Chandler, The Campaigns of Napoleon (1966)",
+   "Encyclopaedia Britannica"
+  ],
+  "w": "Rivoli Veronese, above Lake Garda",
+  "ll": [
+   10.81,
+   45.57
+  ],
+  "o": "victory",
+  "nudge": [
+   -8,
+   -6
+  ],
+  "desc": "A decisive win in the hills above Lake Garda ends Austria's last attempt to rescue besieged Mantua. By October Austria signs the Treaty of Campo Formio.",
+  "fact": "Paris's Rue de Rivoli, one of the grandest streets in the city, is named after this battle.",
+  "kind": "battle"
+ },
+ {
+  "p": "rise",
+  "y": "1798",
+  "d": "21 July 1798",
+  "t": "Battle of the Pyramids",
+  "men": 46000,
+  "camp": "egypt",
+  "coal": "French Revolutionary Wars",
+  "np": "commanded",
+  "cmd": [
+   "France: Bonaparte",
+   "Mamluk beys: Murad Bey and Ibrahim Bey"
+  ],
+  "src": [
+   "Roberts, Napoleon: A Life (2014)",
+   "Fondation Napoléon (napoleon.org)"
+  ],
+  "w": "Embabeh, near Cairo, Egypt",
+  "ll": [
+   31.21,
+   30.07
+  ],
+  "o": "victory",
+  "desc": "Hoping to threaten Britain's route to India, he invades Egypt and defeats the Mamluk cavalry within sight of the pyramids of Giza.",
+  "fact": "He brought about 160 scholars on the expedition. French soldiers found the Rosetta Stone in 1799, and it passed to the British when the French in Egypt surrendered, which is why it's in the British Museum today.",
+  "kind": "battle"
+ },
+ {
+  "p": "rise",
+  "y": "1798",
+  "d": "1–3 August 1798",
+  "t": "Battle of the Nile",
+  "men": 19000,
+  "camp": "egypt",
+  "coal": "French Revolutionary Wars",
+  "np": "absent",
+  "cmd": [
+   "France: Vice-Admiral François-Paul Brueys d'Aigalliers (killed)",
+   "Britain: Rear-Admiral Horatio Nelson"
+  ],
+  "src": [
+   "National Maritime Museum, Greenwich",
+   "Encyclopaedia Britannica"
+  ],
+  "w": "Aboukir Bay, Egypt",
+  "ll": [
+   30.08,
+   31.35
+  ],
+  "o": "defeat",
+  "naval": true,
+  "desc": "Admiral Nelson destroys the French fleet at anchor, leaving Bonaparte's army stranded in Egypt.",
+  "fact": "The French flagship L'Orient blew up during the night battle. The blast was so huge that both sides reportedly stopped firing for a while afterwards.",
+  "kind": "battle"
+ },
+ {
+  "p": "rise",
+  "y": "1799",
+  "d": "March–May 1799",
+  "t": "Siege of Acre",
+  "men": 18000,
+  "camp": "egypt",
+  "coal": "War of the Second Coalition",
+  "np": "commanded",
+  "cmd": [
+   "France: Bonaparte",
+   "Ottoman Empire: Jezzar Pasha, supported by Commodore Sidney Smith (Britain)"
+  ],
+  "src": [
+   "Chandler, The Campaigns of Napoleon (1966)",
+   "Encyclopaedia Britannica"
+  ],
+  "w": "Acre (Akko), on the Levant coast",
+  "ll": [
+   35.08,
+   32.92
+  ],
+  "o": "defeat",
+  "desc": "Marching north into Ottoman Syria, he besieges the coastal fortress of Acre for two months and fails, with plague spreading through his army.",
+  "fact": "The defence was helped by a British naval officer, Sidney Smith, and by a French royalist engineer who had been Bonaparte's classmate at military school.",
+  "kind": "siege"
+ },
+ {
+  "p": "rise",
+  "y": "1799",
+  "d": "9–10 November 1799",
+  "t": "Coup of 18 Brumaire",
+  "camp": "life",
+  "np": "present",
+  "cmd": [
+   "Plotters: Bonaparte, Emmanuel Sieyès and Roger Ducos",
+   "The Directory and the councils of the Republic"
+  ],
+  "src": [
+   "Roberts, Napoleon: A Life (2014)",
+   "Fondation Napoléon (napoleon.org)"
+  ],
+  "w": "Château de Saint-Cloud, near Paris",
+  "ll": [
+   2.22,
+   48.84
+  ],
+  "o": "milestone",
+  "nudge": [
+   -19,
+   10
+  ],
+  "desc": "Back in France after slipping away from Egypt, he joins a coup against the Directory and comes out of it as First Consul, the most powerful man in France at 30.",
+  "fact": "The coup nearly failed when deputies jostled and shouted him down. His brother Lucien saved it by calling in soldiers to clear the hall.",
+  "kind": "political"
+ },
+ {
+  "p": "empire",
+  "y": "1800",
+  "d": "14 June 1800",
+  "t": "Battle of Marengo",
+  "men": 59000,
+  "camp": "italy2",
+  "coal": "War of the Second Coalition",
+  "np": "commanded",
+  "cmd": [
+   "France: Napoleon, with Louis Desaix (killed)",
+   "Austria: Michael von Melas"
+  ],
+  "src": [
+   "Chandler, The Campaigns of Napoleon (1966)",
+   "Fondation Napoléon (napoleon.org)"
+  ],
+  "w": "Marengo, Piedmont",
+  "ll": [
+   8.68,
+   44.89
+  ],
+  "o": "victory",
+  "desc": "After leading his army over the Alps, he is close to losing to the Austrians until General Desaix arrives with fresh troops in the afternoon. Desaix is killed; the battle is won.",
+  "fact": "Jacques-Louis David painted him crossing the Great St Bernard Pass on a rearing stallion. He actually made the crossing on a sure-footed mule.",
+  "kind": "battle"
+ },
+ {
+  "p": "empire",
+  "y": "1804",
+  "d": "2 December 1804",
+  "t": "Coronation at Notre-Dame",
+  "camp": "life",
+  "src": [
+   "Fondation Napoléon (napoleon.org)",
+   "Musée du Louvre (David, Le Sacre de Napoléon)"
+  ],
+  "w": "Notre-Dame, Paris",
+  "ll": [
+   2.35,
+   48.853
+  ],
+  "o": "milestone",
+  "nudge": [
+   13,
+   -11
+  ],
+  "desc": "Napoleon is crowned Emperor of the French in Notre-Dame, with Pope Pius VII there to bless the ceremony.",
+  "fact": "He placed the crown on his own head, then crowned Joséphine. David's enormous painting of the day shows his mother watching, though she didn't actually attend.",
+  "kind": "political"
+ },
+ {
+  "p": "empire",
+  "y": "1805",
+  "d": "21 October 1805",
+  "t": "Battle of Trafalgar",
+  "men": 47000,
+  "camp": "ga",
+  "coal": "War of the Third Coalition",
+  "np": "absent",
+  "cmd": [
+   "France and Spain: Vice-Admiral Pierre-Charles de Villeneuve and Admiral Federico Gravina",
+   "Britain: Vice-Admiral Horatio Nelson (killed)"
+  ],
+  "src": [
+   "National Maritime Museum, Greenwich",
+   "Encyclopaedia Britannica"
+  ],
+  "w": "Off Cape Trafalgar, Spain",
+  "ll": [
+   -6.2,
+   36.25
+  ],
+  "o": "defeat",
+  "naval": true,
+  "desc": "Nelson's fleet crushes the combined French and Spanish navies, ending any real hope of invading Britain.",
+  "fact": "Nelson was shot by a French marksman during the battle. His body was carried home preserved in a cask of brandy.",
+  "kind": "battle"
+ },
+ {
+  "p": "empire",
+  "y": "1805",
+  "d": "October 1805",
+  "t": "Ulm campaign",
+  "camp": "ga",
+  "coal": "War of the Third Coalition",
+  "np": "commanded",
+  "cmd": [
+   "France: Napoleon",
+   "Austria: Karl Mack von Leiberich"
+  ],
+  "src": [
+   "Chandler, The Campaigns of Napoleon (1966)",
+   "Encyclopaedia Britannica"
+  ],
+  "w": "Ulm, on the Danube",
+  "ll": [
+   9.99,
+   48.4
+  ],
+  "o": "victory",
+  "desc": "The Grande Armée marches from the Channel coast to the Danube in a few weeks and encircles an Austrian army, which surrenders almost without a battle.",
+  "fact": "His soldiers joked that the Emperor had found a new way to make war: with their legs instead of their bayonets.",
+  "kind": "campaign"
+ },
+ {
+  "p": "empire",
+  "y": "1805",
+  "d": "2 December 1805",
+  "t": "Battle of Austerlitz",
+  "men": 153000,
+  "camp": "ga",
+  "coal": "War of the Third Coalition",
+  "np": "commanded",
+  "cmd": [
+   "France: Napoleon",
+   "Russia and Austria: Mikhail Kutuzov, with Tsar Alexander I and Emperor Francis II present"
+  ],
+  "src": [
+   "Chandler, The Campaigns of Napoleon (1966)",
+   "Fondation Napoléon (napoleon.org)"
+  ],
+  "w": "Slavkov u Brna, Moravia",
+  "ll": [
+   16.76,
+   49.13
+  ],
+  "o": "victory",
+  "desc": "His masterpiece. He tempts the Russian and Austrian armies to attack his deliberately weakened right flank, then smashes their centre on the Pratzen Heights.",
+  "fact": "It's called the Battle of the Three Emperors and was fought exactly a year after his coronation. Tolstoy set one of the most famous scenes in War and Peace on this battlefield.",
+  "kind": "battle"
+ },
+ {
+  "p": "empire",
+  "y": "1806",
+  "d": "14 October 1806",
+  "t": "Jena–Auerstedt",
+  "men": 212000,
+  "camp": "ga",
+  "coal": "War of the Fourth Coalition",
+  "np": "commanded",
+  "cmd": [
+   "France: Napoleon at Jena, Marshal Louis-Nicolas Davout at Auerstedt",
+   "Prussia: Prince Hohenlohe at Jena, the Duke of Brunswick at Auerstedt (mortally wounded)"
+  ],
+  "src": [
+   "Chandler, The Campaigns of Napoleon (1966)",
+   "Encyclopaedia Britannica"
+  ],
+  "w": "Thuringia, Germany",
+  "ll": [
+   11.59,
+   50.93
+  ],
+  "o": "victory",
+  "nudge": [
+   -7,
+   4
+  ],
+  "desc": "Prussia is shattered in a single day. Napoleon beats one army at Jena while nearby, Marshal Davout defeats the main Prussian force at Auerstedt with far fewer men.",
+  "fact": "The philosopher Hegel, finishing a book in Jena, watched Napoleon ride through town and described him as the world-soul on horseback.",
+  "kind": "battle"
+ },
+ {
+  "p": "empire",
+  "y": "1807",
+  "d": "7–8 February 1807",
+  "t": "Battle of Eylau",
+  "men": 151000,
+  "camp": "ga",
+  "coal": "War of the Fourth Coalition",
+  "np": "commanded",
+  "cmd": [
+   "France: Napoleon",
+   "Russia and Prussia: Levin August von Bennigsen"
+  ],
+  "src": [
+   "Chandler, The Campaigns of Napoleon (1966)",
+   "Fondation Napoléon (napoleon.org)"
+  ],
+  "dispute": "Both sides claimed it. The French held the field, the Russian army withdrew intact.",
+  "w": "Bagrationovsk, near Kaliningrad",
+  "ll": [
+   20.64,
+   54.39
+  ],
+  "o": "draw",
+  "nudge": [
+   -7,
+   2
+  ],
+  "desc": "A brutal fight against the Russians in a snowstorm. Both armies lose heavily and neither breaks.",
+  "fact": "Marshal Murat led one of the biggest cavalry charges in history here, with around 10,000 horsemen.",
+  "kind": "battle"
+ },
+ {
+  "p": "empire",
+  "y": "1807",
+  "d": "14 June 1807",
+  "t": "Battle of Friedland",
+  "men": 140000,
+  "camp": "ga",
+  "coal": "War of the Fourth Coalition",
+  "np": "commanded",
+  "cmd": [
+   "France: Napoleon",
+   "Russia: Levin August von Bennigsen"
+  ],
+  "src": [
+   "Chandler, The Campaigns of Napoleon (1966)",
+   "Encyclopaedia Britannica"
+  ],
+  "w": "Pravdinsk, near Kaliningrad",
+  "ll": [
+   21.02,
+   54.45
+  ],
+  "o": "victory",
+  "nudge": [
+   7,
+   -2
+  ],
+  "desc": "A decisive victory over the Russian army brings peace. Napoleon is now master of continental Europe.",
+  "fact": "He and Tsar Alexander I met to make peace on a raft moored in the middle of the Neman river at Tilsit.",
+  "kind": "battle"
+ },
+ {
+  "p": "strain",
+  "y": "1808",
+  "d": "16–22 July 1808",
+  "t": "Battle of Bailén",
+  "men": 54000,
+  "camp": "pen",
+  "coal": "Peninsular War",
+  "np": "absent",
+  "cmd": [
+   "France: General Pierre Dupont de l'Étang",
+   "Spain: General Francisco Javier Castaños"
+  ],
+  "src": [
+   "Esdaile, The Peninsular War (2002)",
+   "Encyclopaedia Britannica"
+  ],
+  "w": "Bailén, Andalusia",
+  "ll": [
+   -3.78,
+   38.1
+  ],
+  "o": "defeat",
+  "desc": "A French corps is cut off in the Andalusian heat and surrenders in the open field, the first time a Napoleonic army does so. Napoleon is hundreds of miles away. The news runs through Europe and helps convince Austria to fight again.",
+  "fact": "Dupont was stripped of his rank and imprisoned when he got home. Napoleon never forgave him.",
+  "kind": "battle"
+ },
+ {
+  "p": "strain",
+  "y": "1808",
+  "d": "November–December 1808",
+  "t": "Into Spain",
+  "camp": "pen",
+  "coal": "Peninsular War",
+  "np": "commanded",
+  "cmd": [
+   "France: Napoleon",
+   "Spain: Benito San Juan at Somosierra, Tomás de Morla at Madrid"
+  ],
+  "src": [
+   "Esdaile, The Peninsular War (2002)",
+   "Fondation Napoléon (napoleon.org)"
+  ],
+  "w": "Madrid",
+  "ll": [
+   -3.7,
+   40.42
+  ],
+  "o": "victory",
+  "desc": "After pushing the Spanish royal family aside and making his brother Joseph king, he faces a national uprising. He comes in person, wins at Somosierra and retakes Madrid, but the war grinds on for years after he leaves.",
+  "fact": "This war gave English the word “guerrilla”, Spanish for “little war”. Napoleon later called the conflict his Spanish ulcer.",
+  "kind": "campaign"
+ },
+ {
+  "p": "strain",
+  "y": "1809",
+  "d": "21–22 May 1809",
+  "t": "Battle of Aspern-Essling",
+  "men": 176000,
+  "camp": "aus09",
+  "coal": "War of the Fifth Coalition",
+  "np": "commanded",
+  "cmd": [
+   "France: Napoleon, with Marshal Jean Lannes (mortally wounded)",
+   "Austria: Archduke Charles"
+  ],
+  "src": [
+   "Chandler, The Campaigns of Napoleon (1966)",
+   "Encyclopaedia Britannica"
+  ],
+  "w": "Near Vienna, Austria",
+  "ll": [
+   16.5,
+   48.21
+  ],
+  "o": "defeat",
+  "nudge": [
+   -10,
+   6
+  ],
+  "desc": "Crossing the Danube, he is thrown back by Archduke Charles: his first major defeat in person in ten years.",
+  "fact": "One of his closest friends, Marshal Lannes, was mortally wounded here. It's one of the few times Napoleon was seen weeping on a battlefield.",
+  "kind": "battle"
+ },
+ {
+  "p": "strain",
+  "y": "1809",
+  "d": "5–6 July 1809",
+  "t": "Battle of Wagram",
+  "men": 310000,
+  "camp": "aus09",
+  "coal": "War of the Fifth Coalition",
+  "np": "commanded",
+  "cmd": [
+   "France: Napoleon",
+   "Austria: Archduke Charles"
+  ],
+  "src": [
+   "Chandler, The Campaigns of Napoleon (1966)",
+   "Fondation Napoléon (napoleon.org)"
+  ],
+  "w": "Deutsch-Wagram, near Vienna",
+  "ll": [
+   16.56,
+   48.3
+  ],
+  "o": "victory",
+  "nudge": [
+   9,
+   7
+  ],
+  "desc": "Six weeks later he crosses the Danube again and wins one of the largest battles Europe had yet seen.",
+  "fact": "The peace that followed led to his marriage to Marie-Louise of Austria in 1810. She was a great-niece of Marie Antoinette.",
+  "kind": "battle"
+ },
+ {
+  "p": "russia",
+  "y": "1812",
+  "d": "24 June 1812",
+  "t": "Crossing the Neman",
+  "camp": "rus",
+  "coal": "French invasion of Russia",
+  "np": "commanded",
+  "cmd": [
+   "France and allies: Napoleon",
+   "Russia: Michael Barclay de Tolly and Pyotr Bagration"
+  ],
+  "src": [
+   "Zamoyski, 1812 (2004)",
+   "Lieven, Russia Against Napoleon (2009)"
+  ],
+  "w": "Kaunas, Lithuania",
+  "ll": [
+   23.89,
+   54.9
+  ],
+  "o": "milestone",
+  "desc": "The Grande Armée, more than half a million strong, crosses into the Russian Empire. The Russians fall back, burning what they leave behind.",
+  "fact": "It was one of the most multinational armies ever assembled: Poles, Germans, Italians, Dutch, Swiss and more marched beside the French.",
+  "kind": "campaign"
+ },
+ {
+  "p": "russia",
+  "y": "1812",
+  "d": "22 July 1812",
+  "t": "Battle of Salamanca",
+  "men": 100000,
+  "camp": "pen",
+  "coal": "Peninsular War",
+  "np": "absent",
+  "cmd": [
+   "France: Marshal Auguste de Marmont (wounded)",
+   "Britain, Portugal and Spain: Arthur Wellesley, Earl of Wellington"
+  ],
+  "src": [
+   "Muir, Salamanca 1812 (2001)",
+   "Esdaile, The Peninsular War (2002)"
+  ],
+  "w": "Los Arapiles, near Salamanca",
+  "ll": [
+   -5.6,
+   40.9
+  ],
+  "o": "defeat",
+  "desc": "While Napoleon marches into Russia, the other war goes badly. Wellington catches Marmont's army strung out on the march and wrecks half of it in about forty minutes. Madrid falls a few weeks later.",
+  "fact": "General Foy, who was there, wrote that Wellington had beaten 40,000 men in forty minutes. It changed Wellington's reputation from a cautious defender into a dangerous attacker.",
+  "kind": "battle"
+ },
+ {
+  "p": "russia",
+  "y": "1812",
+  "d": "16–18 August 1812",
+  "t": "Battle of Smolensk",
+  "men": 110000,
+  "camp": "rus",
+  "coal": "French invasion of Russia",
+  "np": "commanded",
+  "cmd": [
+   "France: Napoleon",
+   "Russia: Michael Barclay de Tolly and Pyotr Bagration"
+  ],
+  "src": [
+   "Lieven, Russia Against Napoleon (2009)",
+   "Zamoyski, 1812 (2004)"
+  ],
+  "w": "Smolensk, Russia",
+  "ll": [
+   32.04,
+   54.78
+  ],
+  "o": "victory",
+  "desc": "The French take Smolensk, but the Russian army slips away again and leaves the city in flames.",
+  "fact": "Napoleon thought about stopping here for the winter, then decided to push on to Moscow.",
+  "kind": "battle"
+ },
+ {
+  "p": "russia",
+  "y": "1812",
+  "d": "7 September 1812",
+  "t": "Battle of Borodino",
+  "men": 250000,
+  "camp": "rus",
+  "coal": "French invasion of Russia",
+  "np": "commanded",
+  "cmd": [
+   "France: Napoleon",
+   "Russia: Mikhail Kutuzov"
+  ],
+  "src": [
+   "Lieven, Russia Against Napoleon (2009)",
+   "Zamoyski, 1812 (2004)"
+  ],
+  "dispute": "Counted a French victory because they held the field, but the Russian army was not destroyed and Kutuzov claimed it too.",
+  "w": "Borodino, west of Moscow",
+  "ll": [
+   35.82,
+   55.52
+  ],
+  "o": "victory",
+  "desc": "The Russians finally stand and fight. The French hold the field at the end of the day, but the Russian army survives.",
+  "fact": "It was the bloodiest single day of the Napoleonic Wars, with roughly 70,000 casualties. Tchaikovsky's 1812 Overture commemorates the campaign.",
+  "kind": "battle"
+ },
+ {
+  "p": "russia",
+  "y": "1812",
+  "d": "14 September 1812",
+  "t": "Moscow",
+  "camp": "rus",
+  "coal": "French invasion of Russia",
+  "np": "commanded",
+  "src": [
+   "Zamoyski, 1812 (2004)",
+   "Fondation Napoléon (napoleon.org)"
+  ],
+  "w": "Moscow",
+  "ll": [
+   37.62,
+   55.75
+  ],
+  "o": "milestone",
+  "desc": "He enters a nearly empty Moscow. Within hours, fires break out across the city.",
+  "fact": "He waited over a month for the Tsar to negotiate. No answer came, and on 19 October he began the retreat.",
+  "kind": "campaign"
+ },
+ {
+  "p": "russia",
+  "y": "1812",
+  "d": "26–29 November 1812",
+  "t": "Crossing the Berezina",
+  "men": 100000,
+  "camp": "rus",
+  "coal": "French invasion of Russia",
+  "np": "commanded",
+  "cmd": [
+   "France: Napoleon, with General Jean Baptiste Eblé's bridge builders",
+   "Russia: Pavel Chichagov and Peter Wittgenstein"
+  ],
+  "src": [
+   "Zamoyski, 1812 (2004)",
+   "Lieven, Russia Against Napoleon (2009)"
+  ],
+  "dispute": "The crossing itself was a tactical success. It happened inside a strategic disaster, which is why the name became a byword for one.",
+  "w": "Near Barysaw, Belarus",
+  "ll": [
+   28.35,
+   54.33
+  ],
+  "o": "defeat",
+  "desc": "Trapped by Russian armies at a half-frozen river, what is left of the Grande Armée escapes over two hastily built bridges, at terrible cost.",
+  "fact": "Engineers stood chest-deep in icy water to build the bridges. In French, “c'est la Bérézina” still means a complete disaster.",
+  "kind": "battle"
+ },
+ {
+  "p": "fall",
+  "y": "1813",
+  "d": "26–27 August 1813",
+  "t": "Battle of Dresden",
+  "men": 350000,
+  "camp": "ger13",
+  "coal": "War of the Sixth Coalition",
+  "np": "commanded",
+  "cmd": [
+   "France: Napoleon",
+   "Coalition: Karl Philipp von Schwarzenberg, with General Moreau advising"
+  ],
+  "src": [
+   "Chandler, The Campaigns of Napoleon (1966)",
+   "Encyclopaedia Britannica"
+  ],
+  "w": "Dresden, Saxony",
+  "ll": [
+   13.74,
+   51.05
+  ],
+  "o": "victory",
+  "desc": "With a freshly raised army he beats the Allies outside Dresden, his last great victory on German soil.",
+  "fact": "General Moreau, Napoleon's old French rival, was advising the Allies. He was hit by a French cannonball during the battle and died days later.",
+  "nudge": [
+   6,
+   6
+  ],
+  "kind": "battle"
+ },
+ {
+  "p": "fall",
+  "y": "1813",
+  "d": "16–19 October 1813",
+  "t": "Battle of Leipzig",
+  "men": 600000,
+  "camp": "ger13",
+  "coal": "War of the Sixth Coalition",
+  "np": "commanded",
+  "cmd": [
+   "France and allies: Napoleon",
+   "Coalition: Schwarzenberg, Blücher, Bernadotte and Barclay de Tolly"
+  ],
+  "src": [
+   "Chandler, The Campaigns of Napoleon (1966)",
+   "Fondation Napoléon (napoleon.org)"
+  ],
+  "w": "Leipzig, Saxony",
+  "ll": [
+   12.37,
+   51.34
+  ],
+  "o": "defeat",
+  "nudge": [
+   10,
+   -9
+  ],
+  "desc": "Austria, Prussia, Russia and Sweden combine against him in the Battle of the Nations. He is beaten and driven back across the Rhine.",
+  "fact": "With around 600,000 soldiers involved, it was the largest battle in Europe until the First World War. Some Saxon units changed sides in the middle of it.",
+  "kind": "battle"
+ },
+ {
+  "p": "fall",
+  "y": "1814",
+  "d": "1 February 1814",
+  "t": "Battle of La Rothière",
+  "men": 130000,
+  "camp": "fr14",
+  "coal": "War of the Sixth Coalition",
+  "np": "commanded",
+  "cmd": [
+   "France: Napoleon",
+   "Coalition: Gebhard von Blücher, with Austrian and Russian corps"
+  ],
+  "src": [
+   "Chandler, The Campaigns of Napoleon (1966)",
+   "Fondation Napoléon (napoleon.org)"
+  ],
+  "w": "La Rothière, Champagne",
+  "ll": [
+   4.7,
+   48.33
+  ],
+  "o": "defeat",
+  "nudge": [
+   9,
+   7
+  ],
+  "desc": "Fighting on French soil in sleet, he is beaten by Blücher and falls back. In the weeks after it he wins a run of small, brilliant victories with a tiny army, and it changes nothing: there are always more Allied troops.",
+  "fact": "The 1814 campaign is often taught as his finest defensive work. It still ended with the Allies in Paris nine weeks later.",
+  "kind": "battle"
+ },
+ {
+  "p": "fall",
+  "y": "1814",
+  "d": "April 1814",
+  "t": "Abdication at Fontainebleau",
+  "camp": "fr14",
+  "coal": "War of the Sixth Coalition",
+  "src": [
+   "Fondation Napoléon (napoleon.org)",
+   "Roberts, Napoleon: A Life (2014)"
+  ],
+  "w": "Palace of Fontainebleau",
+  "ll": [
+   2.7,
+   48.4
+  ],
+  "o": "milestone",
+  "nudge": [
+   13,
+   10
+  ],
+  "desc": "With the Allies in Paris and his marshals refusing to fight on, he abdicates.",
+  "fact": "His farewell to the Old Guard took place in the palace courtyard that is still called the Cour des Adieux, the Courtyard of Farewells.",
+  "kind": "political"
+ },
+ {
+  "p": "fall",
+  "y": "1814",
+  "d": "May 1814 – February 1815",
+  "t": "Exile on Elba",
+  "camp": "life",
+  "src": [
+   "Roberts, Napoleon: A Life (2014)",
+   "Fondation Napoléon (napoleon.org)"
+  ],
+  "w": "Portoferraio, Elba",
+  "ll": [
+   10.32,
+   42.81
+  ],
+  "o": "milestone",
+  "desc": "Sent to the small island of Elba, he keeps the title of Emperor and actually governs it, building roads and reorganising the iron mines.",
+  "fact": "“Able was I ere I saw Elba” is an English palindrome invented long after. Napoleon himself spoke very little English.",
+  "kind": "personal"
+ },
+ {
+  "p": "fall",
+  "y": "1815",
+  "d": "1 March 1815",
+  "t": "The Hundred Days begin",
+  "camp": "hd",
+  "src": [
+   "Roberts, Napoleon: A Life (2014)",
+   "Fondation Napoléon (napoleon.org)"
+  ],
+  "w": "Golfe-Juan, French Riviera",
+  "ll": [
+   7.07,
+   43.57
+  ],
+  "o": "milestone",
+  "desc": "He escapes Elba and lands on the south coast with about a thousand men. Less than three weeks later he is back in Paris.",
+  "fact": "At Laffrey, troops sent to stop him found him walking toward them, inviting them to shoot their emperor. They joined him instead. His route north is now a scenic road, the Route Napoléon.",
+  "nudge": [
+   2,
+   15
+  ],
+  "kind": "political"
+ },
+ {
+  "p": "fall",
+  "y": "1815",
+  "d": "16 June 1815",
+  "t": "Battle of Quatre-Bras",
+  "men": 60000,
+  "camp": "hd",
+  "coal": "War of the Seventh Coalition",
+  "np": "absent",
+  "cmd": [
+   "France: Marshal Michel Ney",
+   "Allies: the Duke of Wellington, with the Prince of Orange"
+  ],
+  "src": [
+   "Muir, Wellington: Waterloo and the Fortunes of Peace (2015)",
+   "The Napoleon Series (napoleon-series.org)"
+  ],
+  "w": "Quatre-Bras, Belgium",
+  "ll": [
+   4.45,
+   50.58
+  ],
+  "o": "draw",
+  "nudge": [
+   13,
+   -7
+  ],
+  "desc": "On the same afternoon as Ligny, Ney fights Wellington for a crossroads and neither side takes it outright. Wellington pulls back the next day to a ridge at Mont-Saint-Jean, where he will fight Waterloo.",
+  "fact": "A whole French corps spent the day marching back and forth between the two battlefields and fired a shot at neither.",
+  "kind": "battle"
+ },
+ {
+  "p": "fall",
+  "y": "1815",
+  "d": "16 June 1815",
+  "t": "Battle of Ligny",
+  "men": 152000,
+  "camp": "hd",
+  "coal": "War of the Seventh Coalition",
+  "np": "commanded",
+  "cmd": [
+   "France: Napoleon",
+   "Prussia: Gebhard von Blücher"
+  ],
+  "src": [
+   "Muir, Wellington: Waterloo and the Fortunes of Peace (2015)",
+   "Chandler, The Campaigns of Napoleon (1966)"
+  ],
+  "w": "Ligny, Belgium",
+  "ll": [
+   4.58,
+   50.51
+  ],
+  "o": "victory",
+  "nudge": [
+   2,
+   13
+  ],
+  "desc": "His last victory. He beats Blücher's Prussians but doesn't destroy them.",
+  "fact": "The 72-year-old Blücher was trapped under his fallen horse and nearly captured, yet was back in the saddle two days later.",
+  "kind": "battle"
+ },
+ {
+  "p": "fall",
+  "y": "1815",
+  "d": "18 June 1815",
+  "t": "Battle of Waterloo",
+  "men": 190000,
+  "camp": "hd",
+  "coal": "War of the Seventh Coalition",
+  "np": "commanded",
+  "cmd": [
+   "France: Napoleon, with Marshal Michel Ney",
+   "Allies: the Duke of Wellington and Gebhard von Blücher"
+  ],
+  "src": [
+   "Muir, Wellington: Waterloo and the Fortunes of Peace (2015)",
+   "Encyclopaedia Britannica"
+  ],
+  "w": "Waterloo, Belgium",
+  "ll": [
+   4.41,
+   50.68
+  ],
+  "o": "defeat",
+  "nudge": [
+   -12,
+   -7
+  ],
+  "desc": "Facing Wellington's army, with the Prussians arriving on his flank in the afternoon, he suffers his final defeat. The Hundred Days are over.",
+  "fact": "Heavy overnight rain delayed his attack while the ground dried, buying the Prussians precious hours. Wellington called it the nearest-run thing he had ever seen.",
+  "kind": "battle"
+ },
+ {
+  "p": "fall",
+  "y": "1821",
+  "d": "October 1815 – 5 May 1821",
+  "t": "Exile on St Helena",
+  "camp": "life",
+  "src": [
+   "Roberts, Napoleon: A Life (2014)",
+   "Fondation Napoléon (napoleon.org)"
+  ],
+  "w": "St Helena, South Atlantic",
+  "ll": null,
+  "cll": [
+   -5.71,
+   -15.96
+  ],
+  "o": "milestone",
+  "inset": true,
+  "desc": "Exiled by the British to a remote island in the South Atlantic, he dictates his memoirs and dies on 5 May 1821, aged 51.",
+  "fact": "Rumours of arsenic poisoning still circulate, but most historians accept stomach cancer. In 1840 his remains were brought back to Paris, and he now lies at Les Invalides.",
+  "kind": "personal"
+ }
+]

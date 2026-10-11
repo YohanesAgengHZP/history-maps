@@ -1,0 +1,67 @@
+{
+ "Battle of Austerlitz": {
+  "question": "Why was Austerlitz such a consequential victory?",
+  "established": [
+   "On 2 December 1805 a French army of roughly 68,000 defeated a Russian and Austrian army of roughly 85,000.",
+   "Austria signed the Treaty of Pressburg on 26 December 1805, giving up Venetia, the Tyrol and its remaining territory in Italy and southern Germany.",
+   "The Third Coalition broke up. Russia withdrew its forces eastward and Britain was left without a continental army.",
+   "The Confederation of the Rhine was established under French protection in July 1806, and Francis II laid down the imperial crown in August 1806, ending the Holy Roman Empire."
+  ],
+  "interpretation": [
+   "Austerlitz is usually read as the clearest demonstration of Napoleon's operational method: he weakened his own right deliberately, invited the attack on it, and struck the centre once the Allied line had stretched.",
+   "How much of that was planned and how much improvised is still argued. The Allied decision to march across his front gave him an opening he could not have counted on.",
+   "Several historians judge the political consequences heavier than the tactical ones. The reorganisation of Germany that followed outlasted the Empire itself."
+  ],
+  "sources": ["Chandler, The Campaigns of Napoleon (1966)", "Roberts, Napoleon: A Life (2014)"]
+ },
+
+ "Moscow": {
+  "question": "What changed during the Russian campaign of 1812?",
+  "established": [
+   "The Grande Armée crossed the Neman in June 1812 with more than 450,000 men. Only a small fraction came back.",
+   "Napoleon entered Moscow on 14 September 1812. Fires destroyed much of the city within days.",
+   "He waited about five weeks for a Russian offer of peace. None came, and the retreat began on 19 October.",
+   "Most of the losses were caused by disease, hunger, exhaustion and exposure rather than by battle.",
+   "Prussia and Austria had supplied troops to the invasion. Both changed sides during 1813."
+  ],
+  "interpretation": [
+   "Explaining the catastrophe by 'General Winter' alone is rejected by most modern historians: the army was already losing tens of thousands a week to sickness and straggling during the summer advance.",
+   "Historians disagree about where the campaign was actually lost. Candidates include Borodino, the decision to go on from Smolensk, the five weeks spent waiting in Moscow, and the supply arithmetic before a shot was fired.",
+   "Recent work by Dominic Lieven argues the result should be credited to Russian strategy, logistics and administration rather than treated as a French accident."
+  ],
+  "sources": ["Lieven, Russia Against Napoleon (2009)", "Zamoyski, 1812 (2004)"]
+ },
+
+ "Battle of Leipzig": {
+  "question": "Why did the coalition regain the initiative in 1813?",
+  "established": [
+   "Napoleon raised fresh armies after Russia and won at Lützen and Bautzen in May 1813, then at Dresden in August.",
+   "He could not replace the cavalry lost in Russia, which limited pursuit after a victory and reconnaissance before one.",
+   "The Trachenberg Plan, agreed in July 1813, committed the Allies to avoid battle with Napoleon in person and to attack his subordinates instead.",
+   "Austria joined the coalition in August 1813, having been a French ally the year before.",
+   "At Leipzig, 16–19 October 1813, roughly 600,000 men were involved. The French were defeated and withdrew across the Rhine."
+  ],
+  "interpretation": [
+   "The Trachenberg Plan is widely treated as the decisive adaptation: the Allies stopped trying to beat Napoleon and started beating his marshals.",
+   "Others argue the plan mattered less than simple arithmetic, once Austria joined and the coalition could field more men than France could replace.",
+   "The armistice of June to August 1813 is still debated. Napoleon used it to rebuild, but so did the Allies, and most historians judge that it helped them more."
+  ],
+  "sources": ["Chandler, The Campaigns of Napoleon (1966)", "Esdaile, Napoleon's Wars (2007)"]
+ },
+
+ "Battle of Waterloo": {
+  "question": "What decided Waterloo?",
+  "established": [
+   "On 18 June 1815 Napoleon had roughly 73,000 men against Wellington's roughly 68,000, with about 50,000 Prussians arriving through the afternoon.",
+   "Heavy overnight rain delayed the French attack while the ground dried.",
+   "Blücher had been beaten at Ligny two days earlier but his army was not destroyed, and it marched to join Wellington rather than retreating away from him.",
+   "Marshal Grouchy, detached with about 33,000 men to follow the Prussians, never reached the battlefield."
+  ],
+  "interpretation": [
+   "No single cause is agreed. The delay for the ground, the handling of the French cavalry, the orders given to Grouchy and the arrival of the Prussians are all argued as the deciding factor.",
+   "A common view is that the campaign was lost at Ligny rather than at Waterloo, because the Prussians were beaten but left able to march.",
+   "Wellington's description of it as 'the nearest-run thing you ever saw in your life' is quoted constantly; historians differ on whether the margin was really that fine."
+  ],
+  "sources": ["Muir, Wellington: Waterloo and the Fortunes of Peace (2015)", "Roberts, Napoleon: A Life (2014)"]
+ }
+}

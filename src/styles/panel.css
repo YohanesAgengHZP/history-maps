@@ -1,0 +1,99 @@
+/* The stop currently selected: headline facts first, secondary detail folded into the dossier. */
+.panel{padding:26px 26px 22px;display:flex;flex-direction:column;min-width:0}
+
+/* mono is the data voice: counters, coordinates, year ranges */
+.step{font-family:var(--mono);font-size:.74rem;font-weight:500;letter-spacing:.06em;color:var(--muted);margin:0 0 6px}
+.year{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(3.2rem,6vw,4.6rem);line-height:.95;margin:0;letter-spacing:-.02em}
+.title{font-family:var(--display);font-weight:600;font-size:1.65rem;line-height:1.15;margin:10px 0 4px;letter-spacing:-.012em}
+.where{margin:0 0 6px;color:var(--muted);font-size:.95rem}
+.coords{font-family:var(--mono);font-size:.74rem;color:var(--muted);margin:0 0 14px;letter-spacing:.02em}
+.coords[hidden]{display:none}
+
+.badge{display:inline-flex;align-items:center;gap:8px;font-size:.88rem;font-weight:600;margin-bottom:14px}
+.badge i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.badge.o-milestone i{border-radius:0;transform:rotate(45deg);width:9px;height:9px}
+.badge.o-victory{color:var(--victory)} .badge.o-victory i{background:var(--victory)}
+.badge.o-defeat{color:var(--defeat)} .badge.o-defeat i{background:var(--defeat)}
+.badge.o-draw{color:var(--draw)} .badge.o-draw i{background:var(--draw)}
+.badge.o-milestone{color:var(--milestone)} .badge.o-milestone i{background:var(--milestone)}
+.badge small{font-weight:400;color:var(--muted);font-size:.85rem}
+
+.role{margin:-6px 0 14px;font-size:.88rem;color:var(--muted)}
+.role::before{content:"";display:inline-block;width:14px;height:1px;background:var(--rule);vertical-align:middle;margin-right:8px}
+.role[hidden]{display:none}
+
+.desc{margin:0 0 18px;font-size:1rem;line-height:1.6;max-width:60ch}
+.dispute{margin:-8px 0 18px;font-size:.9rem;line-height:1.55;color:var(--muted);max-width:60ch}
+.dispute::before{content:"Disputed. ";font-weight:600;color:var(--ink)}
+.dispute[hidden]{display:none}
+
+.fact{margin:0 0 20px;padding:2px 0 2px 16px;border-left:3px solid var(--victory)}
+.fact h3{margin:0 0 4px;font-family:var(--display);font-style:italic;font-weight:500;font-size:1.05rem}
+.fact p{margin:0;font-size:.95rem;line-height:1.6;color:var(--ink)}
+
+.dossier{margin:0 0 20px;border-top:1px solid var(--rule);padding-top:10px}
+.dossier summary{cursor:pointer;font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);list-style:none}
+.dossier summary::-webkit-details-marker{display:none}
+.dossier summary::before{content:"+";font-family:var(--mono);margin-right:8px}
+.dossier[open] summary::before{content:"–"}
+.dossier dl{margin:12px 0 0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:7px 14px;font-size:.88rem;line-height:1.5}
+.dossier dt{color:var(--muted);white-space:nowrap}
+.dossier dd{margin:0}
+.dossier dd ul{margin:0;padding:0;list-style:none}
+.dossier .cite{font-style:italic}
+
+/* the archive drawer: catalogue records, not decorative parchment cards */
+.dossier.archive[hidden]{display:none}
+.arch{padding:10px 0;border-bottom:1px solid var(--rule)}
+.arch:last-of-type{border-bottom:0}
+.arch h4{margin:0 0 3px;font-family:var(--display);font-weight:600;font-size:.98rem;line-height:1.25}
+.arch-meta{margin:0 0 6px;font-size:.8rem;color:var(--muted);line-height:1.45}
+.arch-tags{margin:0 0 6px;display:flex;flex-wrap:wrap;gap:6px}
+.arch-tags .tag{font-family:var(--mono);font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;
+  border:1px solid var(--rule);padding:2px 6px;color:var(--muted)}
+.arch-tags .is-contemporary{border-color:var(--victory);color:var(--victory)}
+.arch-tags .is-later{border-color:var(--draw);color:var(--draw)}
+.arch-links{margin:0;display:flex;flex-wrap:wrap;gap:14px;font-size:.82rem}
+.arch-links a{color:var(--imperial)}
+.archive-foot{margin:10px 0 0;font-size:.72rem;line-height:1.45;color:var(--muted)}
+.archive-lead{margin:8px 0 4px}
+
+/* letters: his own words, set apart from the editorial voice around them */
+.dossier.letter[hidden]{display:none}
+.dossier.letter summary{text-transform:none;letter-spacing:0;font-family:var(--display);
+  font-style:italic;font-size:1rem;font-weight:500;color:var(--ink)}
+.lt-head{margin:12px 0 8px;font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted)}
+.lt-body{margin:0;padding:0 0 0 14px;border-left:3px solid var(--imperial)}
+.lt-body p{margin:0 0 9px;font-family:var(--display);font-size:.95rem;line-height:1.62}
+.lt-sign{text-align:right;font-style:italic;color:var(--muted);margin-bottom:0!important}
+.lt-note{margin:10px 0 0;font-size:.78rem;line-height:1.5;color:var(--muted)}
+.lt-src{margin:6px 0 0;font-size:.72rem;line-height:1.45;color:var(--muted);font-style:italic}
+.lt-src a{color:var(--muted)}
+.lt-src a:hover{color:var(--ink)}
+
+/* reflection: what is on the record and what is argued about it never share a list */
+.dossier.reflection[hidden]{display:none}
+.dossier.reflection summary{text-transform:none;letter-spacing:0;font-family:var(--display);
+  font-style:italic;font-size:1rem;font-weight:500;color:var(--ink)}
+.refl{margin:12px 0 0}
+.refl h4{margin:0 0 5px;font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted)}
+.refl ul{margin:0;padding:0;list-style:none}
+.refl li{position:relative;padding-left:15px;margin-bottom:6px;font-size:.88rem;line-height:1.5}
+.refl li::before{position:absolute;left:0;top:0;color:var(--muted)}
+/* a squared bullet for record, an open one for argument: the shapes carry the distinction */
+.refl.established li::before{content:"▪"}
+.refl.interpretation li::before{content:"▫"}
+.refl.established{border-left:3px solid var(--imperial);padding-left:13px}
+.refl.interpretation{border-left:3px solid var(--rule);padding-left:13px}
+.refl-sources{margin:12px 0 0;font-size:.72rem;line-height:1.45;color:var(--muted);font-style:italic}
+
+.nav{margin-top:auto;display:flex;gap:10px}
+.nav button{flex:1;padding:10px 12px;border:1px solid var(--rule);background:transparent;cursor:pointer;font-weight:500}
+.nav button:hover:not(:disabled){border-color:var(--ink)}
+.nav button:disabled{opacity:.4;cursor:default}
+
+@media (max-width: 900px){
+  .panel{padding:22px 18px}
+}
