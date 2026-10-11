@@ -86,6 +86,12 @@ function hachureSegments() {
 export function initMap(el) {
   map = L.map(el, {
     crs: PlateCRS,
+    // A view is set here rather than left to fitBounds, because Leaflet's invalidateSize()
+    // early-returns on a map that has never had one. Without this the cached container
+    // size can never be refreshed, and a map that booted at zero height stays stuck.
+    // fitWhenSized replaces this as soon as the container is really laid out.
+    center: [46, 14],
+    zoom: 1,
     zoomSnap: 0,
     zoomDelta: 0.6,
     // scrollWheelZoom is replaced below; see attachWheelZoom
@@ -157,12 +163,8 @@ export function initMap(el) {
   // spacing (see CLAUDE.md) before changing them.
   const pts = onMap.map(({ e }) => toLatLng(e.ll));
   homeBounds = L.latLngBounds(pts).extend([36, -9.5]).extend([57.5, 40]);
-  map.fitBounds(homeBounds, { padding: [34, 34] });
-  minZoom = map.getZoom();
-  map.setMinZoom(minZoom);
-  map.setMaxZoom(minZoom + 3); // the old plate allowed 1x to 8x
-  map.setMaxBounds(homeBounds.pad(0.4));
-  attachWheelZoom(el);   // after min/max are known, since it clamps against them
+  attachWheelZoom(el);
+  fitWhenSized(el);
 
   if (import.meta.env.DEV) window.__map = map; // for the headless checks only
 
@@ -179,6 +181,66 @@ export function initMap(el) {
   applyVisibility();
   render(false);
   return map;
+}
+
+/* The plate is sized by `aspect-ratio`, and Safari resolves that later in layout than
+   Chromium does. Fitting immediately measured a zero-height container there, so fitBounds
+   produced a nonsense zoom and setMinZoom pinned it — the map came up blank and only a
+   reload fixed it, because by then the layout was warm.
+   So: do not fit until the container genuinely has a size, and re-fit if the first real
+   measurement arrives late. */
+let fitted = false;
+let sizeWatch = null;   // must be held: an unreferenced ResizeObserver can be collected
+
+function fitWhenSized(el) {
+  const ready = () => el.clientWidth > 50 && el.clientHeight > 50;
+
+  // Fits, then checks its own work. A zero-height container makes getBoundsZoom return
+  // Infinity, and pinning minZoom/maxBounds to that throws deep inside proj4 and leaves
+  // the map unusable. If the result is not finite we undo and keep waiting, so no single
+  // mistimed measurement can wedge the map.
+  const doFit = () => {
+    if (fitted) return false;
+    // refresh Leaflet's cached size *first*: getBoundsZoom reads that cache, not the DOM,
+    // so testing it beforehand would keep reporting the stale zero and never recover
+    map.invalidateSize({ animate: false });
+    const z = map.getBoundsZoom(homeBounds, false, [34, 34]);
+    if (!isFinite(z)) return false;
+
+    fitted = true;
+    map.fitBounds(homeBounds, { padding: [34, 34], animate: false });
+    if (!isFinite(map.getZoom())) { fitted = false; return false; }
+
+    minZoom = map.getZoom();
+    map.setMinZoom(minZoom);
+    map.setMaxZoom(minZoom + 3);   // the old plate allowed 1x to 8x
+    map.setMaxBounds(homeBounds.pad(0.4));
+    render(false);
+    return true;
+  };
+
+  // Poll on animation frames until the container has a size. A ResizeObserver alone is
+  // not enough: it can be garbage collected, and it does not fire if the element was
+  // already its final size before we started observing.
+  const deadline = performance.now() + 10000;
+  (function waitForSize() {
+    if (ready() && doFit()) return;
+    if (performance.now() > deadline) return;
+    requestAnimationFrame(waitForSize);
+  })();
+
+  // after the first fit, keep Leaflet's cached size honest through later resizes
+  sizeWatch = new ResizeObserver(() => {
+    if (!ready()) return;
+    if (!fitted) doFit();
+    else map.invalidateSize({ animate: false });
+  });
+  sizeWatch.observe(el);
+
+  // web fonts can change metrics after first paint
+  document.fonts?.ready.then(() => {
+    if (ready() && fitted) map.invalidateSize({ animate: false });
+  }).catch(() => {});
 }
 
 /* A trackpad pinch and a mouse wheel both arrive as `wheel` events, but they are nothing
